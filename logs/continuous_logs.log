@@ -125,3 +125,234 @@ x==========x]
 [2025-09-04 21:53:56,259: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
 
 x==========x]
+[2025-09-07 20:05:31,185: INFO]: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-09-07 20:05:31,185: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:05:31,190: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:05:31,190: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:05:31,190: INFO]: common: created directory at: artifacts/data_ingestion]
+[2025-09-07 20:05:31,190: INFO]: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-09-07 20:05:31,267: INFO]: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:05:31,267: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-07 20:05:31,267: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:05:31,267: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:05:31,267: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:05:31,267: INFO]: common: created directory at: artifacts/data_transformation]
+[2025-09-07 20:05:32,757: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:05:32,758: INFO]: main: *******************]
+[2025-09-07 20:05:32,758: INFO]: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-09-07 20:05:32,760: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:05:32,761: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:05:32,762: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:05:32,762: ERROR]: main: 'NoneType' object has no attribute 'root_dir']
+Traceback (most recent call last):
+  File "D:\Projects\TextSummarizer\main.py", line 32, in <module>
+    model_trainer.main()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 13, in main
+    model_trainer_config = config.get_model_trainer_config()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\config\configuration.py", line 51, in get_model_trainer_config
+    root_dir=config.root_dir,
+AttributeError: 'NoneType' object has no attribute 'root_dir'
+[2025-09-07 20:06:58,194: INFO]: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-09-07 20:06:58,218: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:06:58,218: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:06:58,218: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:06:58,218: INFO]: common: created directory at: artifacts/data_ingestion]
+[2025-09-07 20:06:58,218: INFO]: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-09-07 20:06:58,301: INFO]: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:06:58,301: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-07 20:06:58,301: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:06:58,301: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:06:58,301: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:06:58,301: INFO]: common: created directory at: artifacts/data_transformation]
+[2025-09-07 20:06:59,495: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:06:59,496: INFO]: main: *******************]
+[2025-09-07 20:06:59,496: INFO]: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-09-07 20:06:59,498: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:06:59,500: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:06:59,500: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:07:00,913: WARNING]: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-09-07 20:09:01,212: WARNING]: file_download: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`]
+[2025-09-07 20:09:03,984: ERROR]: main: Directory artifacts/data_transformation/smasum_dataset not found]
+Traceback (most recent call last):
+  File "D:\Projects\TextSummarizer\main.py", line 32, in <module>
+    model_trainer.main()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 15, in main
+    model_trainer_config.train()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 24, in train
+    dataset_samsum_pt = load_from_disk(self.config.data_path)
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\datasets\load.py", line 1466, in load_from_disk
+    raise FileNotFoundError(f"Directory {dataset_path} not found")
+FileNotFoundError: Directory artifacts/data_transformation/smasum_dataset not found
+[2025-09-07 20:18:58,799: INFO]: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-09-07 20:18:58,799: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:18:58,799: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:18:58,799: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:18:58,799: INFO]: common: created directory at: artifacts/data_ingestion]
+[2025-09-07 20:18:58,799: INFO]: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-09-07 20:18:58,888: INFO]: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:18:58,888: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-07 20:18:58,889: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:18:58,889: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:18:58,889: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:18:58,889: INFO]: common: created directory at: artifacts/data_transformation]
+[2025-09-07 20:19:00,038: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:19:00,038: INFO]: main: *******************]
+[2025-09-07 20:19:00,039: INFO]: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-09-07 20:19:00,041: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:19:00,044: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:19:00,045: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:19:05,735: ERROR]: main: Directory artifacts/data_transformation/smasum_dataset not found]
+Traceback (most recent call last):
+  File "D:\Projects\TextSummarizer\main.py", line 32, in <module>
+    model_trainer.main()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 15, in main
+    model_trainer_config.train()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 24, in train
+    dataset_samsum_pt = load_from_disk(self.config.data_path)
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\datasets\load.py", line 1466, in load_from_disk
+    raise FileNotFoundError(f"Directory {dataset_path} not found")
+FileNotFoundError: Directory artifacts/data_transformation/smasum_dataset not found
+[2025-09-07 20:20:00,893: INFO]: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-09-07 20:20:00,923: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:20:00,925: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:20:00,928: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:20:00,928: INFO]: common: created directory at: artifacts/data_ingestion]
+[2025-09-07 20:20:00,928: INFO]: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-09-07 20:20:01,015: INFO]: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:20:01,015: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-07 20:20:01,015: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:20:01,015: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:20:01,015: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:20:01,022: INFO]: common: created directory at: artifacts/data_transformation]
+[2025-09-07 20:20:02,185: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:20:02,185: INFO]: main: *******************]
+[2025-09-07 20:20:02,185: INFO]: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-09-07 20:20:02,188: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:20:02,188: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:20:02,191: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:20:07,427: ERROR]: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "D:\Projects\TextSummarizer\main.py", line 32, in <module>
+    model_trainer.main()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 15, in main
+    model_trainer_config.train()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 35, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-09-07 20:38:26,461: INFO]: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-09-07 20:38:26,461: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:38:26,461: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:38:26,461: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:38:26,461: INFO]: common: created directory at: artifacts/data_ingestion]
+[2025-09-07 20:38:26,466: INFO]: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-09-07 20:38:26,599: INFO]: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:38:26,599: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-07 20:38:26,601: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:38:26,603: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:38:26,604: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:38:26,604: INFO]: common: created directory at: artifacts/data_transformation]
+[2025-09-07 20:38:28,176: ERROR]: main: [Errno 22] Invalid argument: 'D:/Projects/TextSummarizer/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow']
+Traceback (most recent call last):
+  File "D:\Projects\TextSummarizer\main.py", line 20, in <module>
+    data_transformation.main()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_2_data_transformation_pipeline.py", line 14, in main
+    data_transformation.convert()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\components\data_transformation.py", line 32, in convert
+    dataset_samsum_pt.save_to_disk(os.path.join(self.config.root_dir,"samsum_dataset"))
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\datasets\dataset_dict.py", line 1350, in save_to_disk
+    dataset.save_to_disk(
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\datasets\arrow_dataset.py", line 1626, in save_to_disk
+    for job_id, done, content in Dataset._save_to_disk_single(**kwargs):
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\datasets\arrow_dataset.py", line 1650, in _save_to_disk_single
+    writer = ArrowWriter(
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\datasets\arrow_writer.py", line 389, in __init__
+    self.stream = self._fs.open(path, "wb")
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\fsspec\spec.py", line 1310, in open
+    f = self._open(
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\fsspec\implementations\local.py", line 201, in _open
+    return LocalFileOpener(path, mode, fs=self, **kwargs)
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\fsspec\implementations\local.py", line 365, in __init__
+    self._open()
+  File "D:\Projects\TextSummarizer\venv\lib\site-packages\fsspec\implementations\local.py", line 370, in _open
+    self.f = open(self.path, mode=self.mode)
+OSError: [Errno 22] Invalid argument: 'D:/Projects/TextSummarizer/artifacts/data_transformation/samsum_dataset/train/data-00000-of-00001.arrow'
+[2025-09-07 20:41:17,047: INFO]: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-09-07 20:41:17,047: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:41:17,047: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:41:17,047: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:41:17,047: INFO]: common: created directory at: artifacts/data_ingestion]
+[2025-09-07 20:41:17,047: INFO]: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-09-07 20:41:17,145: INFO]: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:41:17,145: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-07 20:41:17,145: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:41:17,145: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:41:17,145: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:41:17,145: INFO]: common: created directory at: artifacts/data_transformation]
+[2025-09-07 20:41:18,266: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:41:18,267: INFO]: main: *******************]
+[2025-09-07 20:41:18,267: INFO]: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-09-07 20:41:18,270: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:41:18,272: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:41:18,272: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:41:25,890: ERROR]: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy']
+Traceback (most recent call last):
+  File "D:\Projects\TextSummarizer\main.py", line 32, in <module>
+    model_trainer.main()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 15, in main
+    model_trainer_config.train()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 35, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluation_strategy'
+[2025-09-07 20:50:02,993: INFO]: main: >>>>>> stage Data Ingestion Stage started <<<<<<]
+[2025-09-07 20:50:02,997: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:50:02,997: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:50:02,997: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:50:03,000: INFO]: common: created directory at: artifacts/data_ingestion]
+[2025-09-07 20:50:03,000: INFO]: data_ingestion: File already exists of size: ~ 7718 KB]
+[2025-09-07 20:50:03,084: INFO]: main: >>>>>> stage Data Ingestion Stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:50:03,084: INFO]: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-09-07 20:50:03,084: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:50:03,088: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:50:03,088: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:50:03,088: INFO]: common: created directory at: artifacts/data_transformation]
+[2025-09-07 20:50:06,565: INFO]: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-09-07 20:50:06,565: INFO]: main: *******************]
+[2025-09-07 20:50:06,565: INFO]: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-09-07 20:50:06,568: INFO]: common: yaml file: config\config.yaml loaded successfully]
+[2025-09-07 20:50:06,570: INFO]: common: yaml file: params.yaml loaded successfully]
+[2025-09-07 20:50:06,570: INFO]: common: created directory at: artifacts]
+[2025-09-07 20:50:12,416: ERROR]: main: TrainingArguments.__init__() got an unexpected keyword argument 'evaluate_during_training']
+Traceback (most recent call last):
+  File "D:\Projects\TextSummarizer\main.py", line 32, in <module>
+    model_trainer.main()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\pipeline\stage_3_model_trainer_pipeline.py", line 15, in main
+    model_trainer_config.train()
+  File "D:\Projects\TextSummarizer\src\textSummarizer\components\model_trainer.py", line 35, in train
+    trainer_args = TrainingArguments(
+TypeError: TrainingArguments.__init__() got an unexpected keyword argument 'evaluate_during_training'
